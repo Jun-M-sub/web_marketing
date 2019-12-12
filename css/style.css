@@ -8,18 +8,38 @@ body {
     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     color: #333;
     line-height: 1.8;
+    background: #CBFFD3;
+}
+
+.main-first {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
 }
 
 h1 {
-    position: relative;
+    position: absolute;
+    top: 40px;
+    left: 20px;
     padding: 2px 48px;
     border-bottom: 2px solid #00BB00;
     font-weight: bold;
 }
 
+.img {
+    position: relative;
+}
+
+.img img{
+    width: 100%;
+}
 @media screen and (max-width:768px){
     h1 {
-        font-size: 28px;
+        font-size: 25px;
+    }
+    
+    h2 {
+        font-size: 20px !important;
     }
 }
 
@@ -38,32 +58,34 @@ h1:before {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: 2px solid #ddd;
+    border: 2px solid #aaa;
     bottom: -16px;
     left: 10px;
 }
 
 h1:after {
     height: 64px;
-    border-left: 2px solid #ddd;
+    border-left: 2px solid #aaa;
     bottom: -32px;
     left: 24px;
 }
 
 h2 {
-    font-size: 1.3rem !important;
+    font-size: 1.3rem;
 }
 
+.wrap {
+    margin-bottom: 50px;
+}
 
 form h2 {
     font-weight: bold;
-    margin-top: 50px;
     margin-bottom: 20px;
     padding: 0.25em 0.5em !important;
     /*上下 左右の余白*/
     background: transparent !important;
     /*背景透明に*/
-    font-size: 25px !important;
+    font-size: 25px;
 }
 
 /*
@@ -84,15 +106,11 @@ h2::before {
     margin-bottom: 80px !important;
 }
 
-form {
-    margin-top: 70px;
-}
-
 .main-inner {
     max-width: 900px;
-    padding: 20px 10px;
+    padding: 30px 10px 5px 10px;
     margin: auto;
-    background-color: #FFFFEE;
+    background-color: #fff;
 }
 
 .table,
@@ -101,6 +119,10 @@ form {
     margin: auto;
 }
 
+table {
+    margin-bottom: 100px !important;
+    box-shadow: 2px 2px 4px -2px gray;
+}
 .table-contactform7 {
     overflow: hidden;
     table-layout: fixed;
@@ -199,3 +221,10 @@ textarea {
 .text-large {
     height: 150px;
 }
+
+tr {
+    box-shadow: 2px 0px 4px -2px gray;
+}
+
+/*ボタンの編集*/
+
