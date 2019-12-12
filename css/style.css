@@ -8,18 +8,23 @@ body {
     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     color: #333;
     line-height: 1.8;
-
 }
 
 h1 {
     position: relative;
     padding: 2px 48px;
-    border-bottom: 1px solid #62A1CB;
-    font-weight: lighter;
+    border-bottom: 2px solid #00BB00;
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px){
+    h1 {
+        font-size: 28px;
+    }
 }
 
 h1:first-letter {
-    color: #62A1CB;
+    color: #00BB00;
 }
 
 h1:before,
@@ -33,14 +38,14 @@ h1:before {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     bottom: -16px;
-    left: 8px;
+    left: 10px;
 }
 
 h1:after {
     height: 64px;
-    border-left: 1px solid #ddd;
+    border-left: 2px solid #ddd;
     bottom: -32px;
     left: 24px;
 }
@@ -48,6 +53,7 @@ h1:after {
 h2 {
     font-size: 1.3rem !important;
 }
+
 
 form h2 {
     font-weight: bold;
@@ -57,8 +63,25 @@ form h2 {
     /*上下 左右の余白*/
     background: transparent !important;
     /*背景透明に*/
-    border-left: solid 5px #7db4e6 !important;
-    /*左線*/
+    font-size: 25px !important;
+}
+
+/*
+h2::before {
+
+    font-family: "Font Awesome 5 Free";
+    content: "\f3c5";
+    font-weight: bold;
+}
+*/
+
+.fa-map-marker-alt{
+    margin-right: 10px;
+    color: #EE0000;
+}
+
+.planning {
+    margin-bottom: 80px !important;
 }
 
 form {
@@ -67,8 +90,9 @@ form {
 
 .main-inner {
     max-width: 900px;
-    padding: 10px;
+    padding: 20px 10px;
     margin: auto;
+    background-color: #FFFFEE;
 }
 
 .table,
@@ -150,4 +174,28 @@ form {
         width: 100%;
         border-top: none !important;
     }
+}
+
+.form-medium {
+    width: 350px;
+}
+
+.form-large {
+    width: 450px;
+}
+
+select {
+    margin: 5px 10px 10px 5px;
+}
+
+select,
+input,
+textarea {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.text-large {
+    height: 150px;
 }
