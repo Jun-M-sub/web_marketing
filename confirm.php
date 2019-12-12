@@ -2,103 +2,82 @@
 include("header.php");
 ?>
 
-<?php $name = $_POST['name'];
-      $tel = $_POST['tel'];
-      $company = $_POST['company'];
-      $mail = $_POST['mail'];
-      $mail2 = $_POST['mail2'];
-      $content = $_POST['content'];    
+<?php
+        $plan = $_POST['plan'];
+        $person_name = $_POST['person_name'];
+        $person_phone = $_POST['person_phone'];
+        $shop_cat = $_POST['shop_cat'];
+        $shop_str = $_POST['shop_str'];
+        $ng_key = $_POST['ng_key'];
+        $card_num = $_POST['card_num'];
+        $card_time = $_POST['card_time'];
+        $card_code = $_POST['card_code'];
+        $card_name = $_POST['card_name'];
+        $my_id = $_POST['my_id'];
+        $my_id2 = $_POST['my_id2'];
+        $shop_name = $_POST['shop_name'];
+        $main_cat = $_POST['main_cat'];
+        $zip_code= $_POST['zip_code'];
+        $add = $_POST['add'];
+        $open_time = $_POST['open_time'];
+        $shop_phone = $_POST['shop_phone'];
+        $home_page = $_POST['home_page'];
+        $paymend = $_POST['payment'];
+        $description = $_POST['description'];
+ || ($person_phone == "") || ($shop_cat == "") || ($shop_str == "") || ($shop_str == "")
 ?>
 <main>
-<div class="main-inner">
-<h2>お問い合わせ</h2>
-<dl class="contact">
-        <dt>お名前</dt>
-        <dd><?php 
-            if($name == ""){
-                print "<span>入力必須です。</span>";
-            }elseif(mb_strlen($name) > 20){
-                print "<span>お名前は20字以内で入力してください。</span>";
-            }else{
-                print $name;
-            } ?>
-        </dd>
-        <dt>電話番号</dt>
-        <dd><?php 
-            if(!preg_match('/^[0-9]*$/',$tel)){
-                print "<span>電話番号は半角数字で入力してください。</span>";
-            }elseif($tel == ""){
-                print "&nbsp;";
-            }else{
-                print $tel;
-            } ?>
-        </dd>
-        <dt>会社名</dt>
-        <dd><?php 
-            if(mb_strlen($company)>20){
-                print "<span>会社名は20字以内で入力してください。</span>";
-            }elseif($company == ""){
-                print "&nbsp;";
-            }
-            else{
-                print $company;                
-            } ?>
-        </dd>
-        <dt>メールアドレス</dt>
-        <dd><?php 
-            if($mail == "" | $mail2 == ""){
-                print "<span>入力必須です。</span>";
-            }elseif($mail != $mail2){
-                print "<span>メールアドレスが一致しません。</span>";
-            }elseif(!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",$mail)){
-                print "<span>有効なメールアドレスを入力してください。</span>";
-            }else{
-                print $mail;
-            } ?>
-        </dd>
-        <dt>お問い合わせ内容</dt>
-        <dd><?php 
-            if($content == ""){
-                print "<span>入力必須です。</span>";
-            }elseif(mb_strlen($content)>1000){
-                print "<span>お問い合わせは1000字以内で入力してください。</span>";
-            }else{
-                print $content;                
-            } ?>
-        </dd>
-</dl>
-<p>よろしければ「送信」ボタンを押してください。</p>
+    <div class="main-inner">
+        <h2>申込内容確認</h2>
+        <dl class="contact">
+            <dt>プラン</dt>
+            <dd><?php print $plan; ?></dd>
+            <dd><?php 
+            
+        <p>よろしければ「送信」ボタンを押してください。</p>
 
-<?php
+        <?php
     
-print '<form action="complete.php" method="post">';    
-    
-print'<input name="name" type="hidden" value="'.$name.'">';
-print'<input name="tel" type="hidden" value="'.$tel.'">';
-print'<input name="company" type="hidden" value="'.$company.'">';
-print'<input name="mail" type="hidden" value="'.$mail.'">';
-print'<input name="content" type="hidden" value="'.$content.'">';
+                print '<form action="complete.php" method="post">';    
+
+                print'<input name="plan" type="hidden" value="'.$plan.'">';
+                print'<input name="person_name" type="hidden" value="'.$person_name.'">';
+                print'<input name="person_phone" type="hidden" value="'.$person_phone.'">';
+                print'<input name="shop_cat" type="hidden" value="'.$shop_cat.'">';
+                print'<input name="shop_str" type="hidden" value="'.$shop_str.'">';
+                print'<input name="ng_key" type="hidden" value="'.$ng_key.'">';
+                print'<input name="card_num" type="hidden" value="'.$card_num.'">';
+                print'<input name="card_time" type="hidden" value="'.$card_time.'">';
+                print'<input name="card_code" type="hidden" value="'.$card_code.'">';
+                print'<input name="card_name" type="hidden" value="'.$card_name.'">';
+                print'<input name="my_id" type="hidden" value="'.$my_id.'">';
+                print'<input name="shop_name" type="hidden" value="'.$shop_name.'">';
+                print'<input name="main_cat" type="hidden" value="'.$main_cat.'">';
+                print'<input name="zip_code" type="hidden" value="'.$zip_code.'">';
+                print'<input name="add" type="hidden" value="'.$add.'">';
+                print'<input name="open_time" type="hidden" value="'.$open_time.'">';
+                print'<input name="shop_phone" type="hidden" value="'.$shop_phone.'">';
+                print'<input name="home_page" type="hidden" value="'.$home_page.'">';
+                print'<input name="payment" type="hidden" value="'.$payment.'">';
 
 if($name == "" ||$mail == "" ||$content == ""){ ?>
-    <div class="btn-inner">
-        <input class="back-btn" type="button" onclick="history.back()" value="戻る">
-    </div>
-<?php }else{ ?>
-    
-    <div class="btn-inner">
-    <input class="back-btn" type="button" onclick="history.back()" value="戻る">
-    
-    <input class="next-btn" type="submit" name="submit" value="送信">
-    </div>
-    
-<?php } ?>
+                <div class="btn-inner">
+                    <input class="back-btn" type="button" onclick="history.back()" value="戻る">
+                </div>
+                <?php }else{ ?>
 
-</form>
+                <div class="btn-inner">
+                    <input class="back-btn" type="button" onclick="history.back()" value="戻る">
 
-</div>
+                    <input class="next-btn" type="submit" name="submit" value="送信">
+                </div>
+
+                <?php } ?>
+
+                </form>
+
+    </div>
 </main>
 <?php
 include("footer.php");
 ?>
-
-

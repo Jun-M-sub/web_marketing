@@ -5,9 +5,149 @@ html {
 }
 
 body {
-    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     color: #333;
     line-height: 1.8;
-    background: #e9eaed;
+
 }
 
+h1 {
+    position: relative;
+    padding: 2px 48px;
+    border-bottom: 1px solid #62A1CB;
+    font-weight: lighter;
+}
+
+h1:first-letter {
+    color: #62A1CB;
+}
+
+h1:before,
+h1:after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+h1:before {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    bottom: -16px;
+    left: 8px;
+}
+
+h1:after {
+    height: 64px;
+    border-left: 1px solid #ddd;
+    bottom: -32px;
+    left: 24px;
+}
+
+h2 {
+    font-size: 1.3rem !important;
+}
+
+form h2 {
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 0.25em 0.5em !important;
+    /*上下 左右の余白*/
+    background: transparent !important;
+    /*背景透明に*/
+    border-left: solid 5px #7db4e6 !important;
+    /*左線*/
+}
+
+form {
+    margin-top: 70px;
+}
+
+.main-inner {
+    max-width: 900px;
+    padding: 10px;
+    margin: auto;
+}
+
+.table,
+.planning {
+    max-width: 800px;
+    margin: auto;
+}
+
+.table-contactform7 {
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.required-contactform7 {
+    padding: 5px;
+    background: #DE8686;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.unrequired-contactform7 {
+    padding: 5px;
+    background: #BDBDBD;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.table-contactform7 th {
+    font-weight: bold;
+}
+
+.table-contactform7 input,
+.table-contactform7 textarea {
+    max-width: 90% !important;
+    margin: 5px 10px 10px 5px;
+}
+
+.address-100 input {
+    max-width: 90% !important;
+    margin: 5px 10px 10px 5px;
+}
+
+.message-100 textarea {
+    width: 100%;
+    margin: 5px 10px 10px 5px;
+}
+
+@media screen and (min-width: 900px) {
+    .table-contactform7 th {
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .table-contactform7 {
+        display: block;
+    }
+
+    .table-contactform7 tbody,
+    .table-contactform7 tr {
+        display: block;
+        width: 100%;
+    }
+
+    .table-contactform7 th {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        border: none;
+    }
+
+    .table-contactform7 td {
+        display: list-item;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-top: none !important;
+    }
+}
