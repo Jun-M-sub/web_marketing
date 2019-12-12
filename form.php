@@ -15,12 +15,12 @@ include("header.php");
             <div class="wrap">
                 <h2><i class="fas fa-map-marker-alt"></i>プラン選択</h2>
                 <div class="planning">
-                    <div>
+                    <div class="choise">
                         <div><input type="radio" name="plan" value="おまかせ" checked>MEO対策まるごとおまかせパック(19,800円 + 10,000円)<span class="osusume">←オススメ</span></div>
                         <p>※店舗紹介の整備から日々のメンテナンスまですべてお任せ。</p>
                     </div>
                     <div>
-                        <div><input type="radio" name="plan" value="ベーシック">MEO対策ベーシックコース(19,800円)</div>
+                        <div class="choise"><input type="radio" name="plan" value="ベーシック">MEO対策ベーシックコース(19,800円)</div>
                         <p>※マイビジネス情報の整備及び週1回以上の記事投稿・ユーザー評価への返信をご自身で行っていただく必要があります。</p>
                     </div>
                 </div>
