@@ -29,31 +29,39 @@
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 
 
-    <!--　ドラッグドロップエリア
+
     <script>
-        window.onload = function() {
-            var fileArea = document.getElementById('drag-drop-area');
-            var fileInput = document.getElementById('fileInput');
+        //ドラッグドロップエリア
+        //        window.onload = function() {
+        //            var fileArea = document.getElementById('drag-drop-area');
+        //            var fileInput = document.getElementById('fileInput');
+        //
+        //            fileArea.addEventListener('dragover', function(evt) {
+        //                evt.preventDefault();
+        //                fileArea.classList.add('dragover');
+        //            });
+        //
+        //            fileArea.addEventListener('dragleave', function(evt) {
+        //                evt.preventDefault();
+        //                fileArea.classList.remove('dragover');
+        //            });
+        //            fileArea.addEventListener('drop', function(evt) {
+        //                evt.preventDefault();
+        //                fileArea.classList.remove('dragenter');
+        //                var files = evt.dataTransfer.files;
+        //                fileInput.files = files;
+        //            });
+        //        }
 
-            fileArea.addEventListener('dragover', function(evt) {
-                evt.preventDefault();
-                fileArea.classList.add('dragover');
-            });
+        var element = document.getElementById("plan");
 
-            fileArea.addEventListener('dragleave', function(evt) {
-                evt.preventDefault();
-                fileArea.classList.remove('dragover');
-            });
-            fileArea.addEventListener('drop', function(evt) {
-                evt.preventDefault();
-                fileArea.classList.remove('dragenter');
-                var files = evt.dataTransfer.files;
-                fileInput.files = files;
-            });
+        if (element.checked) {
+            // チェックされている
+        } else {
+            // チェックされていない
         }
 
     </script>
--->
 </head>
 
 <body>

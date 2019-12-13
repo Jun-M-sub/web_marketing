@@ -11,18 +11,25 @@ include("header.php");
     <div class="main-inner">
 
 
-        <form action="" method="post">
+        <form action="" method="post" id="plan">
+
+
             <div class="wrap">
                 <h2><i class="fas fa-map-marker-alt"></i>プラン選択</h2>
-                <div class="planning">
-                    <div class="choise">
-                        <div><input type="radio" name="plan" value="おまかせ" checked>MEO対策まるごとおまかせパック(19,800円 + 10,000円)<span class="osusume">←オススメ</span></div>
-                        <p>※店舗紹介の整備から日々のメンテナンスまですべてお任せ。</p>
-                    </div>
-                    <div>
-                        <div class="choise"><input type="radio" name="plan" value="ベーシック">MEO対策ベーシックコース(19,800円)</div>
-                        <p>※マイビジネス情報の整備及び週1回以上の記事投稿・ユーザー評価への返信をご自身で行っていただく必要があります。</p>
-                    </div>
+                <div class="cp_ipradio row">
+                    <label class="label-title col-md-6" for="d_rb1">
+                        <input type="radio" name="plan" value="おまかせ" checked class="radio">
+                        <div class="plan-pack"><b>MEO対策まるごとおまかせパック<br>月額 19,800円 + 10,000円</b><span class="plan-biko1">安心！オススメ！！</span></div>
+                        <p>店舗紹介の整備から日々のメンテナンスまですべてお任せ。<br>必須(<span style="color:#f00;">*</span>)以外の不明な項目は<b class="plan-info1">未入力でもOK！</b><br>ご登録後に詳しくご説明いたします。</p>
+                    </label>
+                    
+
+                    <label class="label-title col-md-6" for="d_rb2">
+                        <input id="plan" type="radio" name="plan" value="ベーシック" class="radio">
+                        <div class="plan-pack"><b>MEO対策ベーシックコース<br>月額 19,800円</b><span class="plan-biko">セルフ更新</span></div>
+                        <p>マイビジネス情報の整備及び週1回以上の記事投稿・ユーザー評価への返信をご自身で行っていただく必要があります。<br>また、以下の<b class="plan-info2">すべての項目を正しく入力</b>する必要があります。</p>
+                    </label>
+                    
                 </div>
             </div>
             <div class="wrap">
@@ -32,16 +39,16 @@ include("header.php");
                     <tbody>
                         <tr>
                             <th>
-                                <div><span class="table-contactform7">担当者氏名</span></div>
+                                <div><span class="table-contactform7">担当者氏名<span style="color:#f00;">*</span></span></div>
                             </th>
-                            <td><input type="text" name="person_name" class="form-medium" placeholder=""></td>
+                            <td><input type="text" name="person_name" class="form-medium" placeholder="" required></td>
                         </tr>
 
                         <tr>
                             <th>
-                                <div>担当者電話</div>
+                                <div>担当者電話<span style="color:#f00;">*</span></div>
                             </th>
-                            <td><input type="text" name="person_phone" class="form-medium" placeholder=""></td>
+                            <td><input type="tel" name="person_phone" class="form-medium" placeholder="" required></td>
                         </tr>
 
                         <tr>
@@ -87,33 +94,33 @@ include("header.php");
 
                         <tr>
                             <th>
-                                <div>カード番号</div>
+                                <div>カード番号<span style="color:#f00;">*</span></div>
                             </th>
-                            <td><input type="text" name="card_num" class="form-medium" placeholder=""></td>
+                            <td><input type="text" name="card_num" class="form-medium" placeholder="" required></td>
                         </tr>
 
 
                         <tr>
                             <th>
-                                <div>有効期限</div>
+                                <div>有効期限<span style="color:#f00;">*</span></div>
                             </th>
-                            <td><input type="text" name="card_time" class="form-medium" placeholder=""></td>
+                            <td><input type="month" name="card_time" class="form-medium" placeholder="" required min="2020-01-01"></td>
                         </tr>
 
 
                         <tr>
                             <th>
-                                <div>セキュリティコード</div>
+                                <div>セキュリティコード<span style="color:#f00;">*</span></div>
                             </th>
-                            <td><input type="text" name="card_code" class="form-medium" placeholder=""></td>
+                            <td><input type="text" name="card_code" class="form-medium" placeholder="" required></td>
                         </tr>
 
 
                         <tr>
                             <th>
-                                <div>カード名義</div>
+                                <div>カード名義<span style="color:#f00;">*</span></div>
                             </th>
-                            <td><input type="text" name="card_name" class="form-medium" placeholder=""></td>
+                            <td><input type="text" name="card_name" class="form-medium" placeholder="" required></td>
                         </tr>
                     </tbody>
                 </table>
@@ -126,16 +133,16 @@ include("header.php");
 
                         <tr>
                             <th>
-                                <div>マイビジネスID</div>
+                                <div>マイビジネスID<span style="color:#f00;">*</span><span class="content-biko">おまかせプランの方は連絡先メールアドレスでもOK</span></div>
                             </th>
-                            <td><input type="text" name="my_id" class="form-medium" placeholder="myshop@gmail.com"></td>
+                            <td><input type="email" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
                         </tr>
 
                         <tr>
                             <th>
-                                <div>マイビジネスID(確認)</div>
+                                <div>マイビジネスID(確認)<span style="color:#f00;">*</span></div>
                             </th>
-                            <td><input type="text" name="my_id2" class="form-medium" placeholder="myshop@gmail.com"></td>
+                            <td><input type="email" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required></td>
                         </tr>
 
                         <tr>
@@ -154,14 +161,14 @@ include("header.php");
 
                         <tr>
                             <th>
-                                <div>郵便番号</div>
+                                <div>郵便番号<span class="content-biko">住所自動入力</span></div>
                             </th>
                             <td><input type="text" name="zip_code" class="form-medium" placeholder="0190505" onKeyUp="AjaxZip3.zip2addr(this,'','add','add')"></td>
                         </tr>
 
                         <tr>
                             <th>
-                                <div>住所<span class="bikou">ビル名まで正確に入力
+                                <div>住所<span class="content-biko">ビル名まで正確に入力
                                     </span></div>
                             </th>
                             <td><input type="text" name="add" class="form-large" placeholder=""></td>
@@ -169,7 +176,7 @@ include("header.php");
 
                         <tr>
                             <th>
-                                <div>営業時間<br><span class="bikou">(営業曜日・定休日も明記)</span></div>
+                                <div>営業時間<br><span class="content-biko">営業曜日・定休日も明記</span></div>
                             </th>
                             <td><input type="text" name="open_time" class="form-medium" placeholder=""></td>
                         </tr>
@@ -185,7 +192,7 @@ include("header.php");
                             <th>
                                 <div>ホームページURL</div>
                             </th>
-                            <td><input type="text" name="home_page" class="form-medium" placeholder=""></td>
+                            <td><input type="url" name="home_page" class="form-medium" placeholder=""></td>
                         </tr>
 
                         <tr>
