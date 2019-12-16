@@ -29,7 +29,6 @@
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 
 
-
     <script>
         //ドラッグドロップエリア
         //        window.onload = function() {
@@ -53,7 +52,7 @@
         //            });
         //        }
 
-        var element = document.getElementById("plan");
+        var element = document.getElementById("form");
 
         if (element.checked) {
             // チェックされている
@@ -61,10 +60,27 @@
             // チェックされていない
         }
 
+        function entryChange1() {
+            radio = document.getElementsByName('plan')
+            if (radio[0].checked) {
+                //フォーム
+                document.getElementById('firstBox').style.display = "";
+                document.getElementById('secondBox').style.display = "none";
+                //特典
+                document.getElementById('firstNotice').style.display = "";
+            } else if (radio[1].checked) {
+                //フォーム
+                document.getElementById('firstBox').style.display = "none";
+                document.getElementById('secondBox').style.display = "";
+                //特典
+                document.getElementById('firstNotice').style.display = "none";
+            }
+        }
+
     </script>
 </head>
 
-<body>
+<body onload="entryChange1()">
 
     <header>
 
