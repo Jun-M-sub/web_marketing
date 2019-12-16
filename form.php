@@ -27,8 +27,8 @@ include("header.php");
 
             </div>
         </div>
-        
-<!--        おまかせ-->
+
+        <!--        おまかせ-->
         <div id="firstBox">
             <form action="" method="post" id="form1">
                 <input type="hidden" value="おまかせ">
@@ -46,28 +46,12 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>担当者電話<span style="color:#f00;">*</span></div>
+                                    <div>担当者電話<span style="color:#f00;">*</span><span class="content-biko">必ず運用を担当する方に直接つながるお電話番号を記載ください。</span></div>
                                 </th>
                                 <td><input type="tel" name="person_phone" class="form-medium" placeholder="" required></td>
                             </tr>
 
-                            <tr>
-                                <th>
-                                    <div>業種</div>
-                                </th>
-                                <td><select name="shop_cat" class="form-medium">
-                                        <option value="店舗型（エステ・美容院など）">店舗型（エステ・美容院など）</option>
-                                        <option value="店舗型（エステ・美容院など）">店舗型（飲食関係）</option>
-                                        <option value="店舗型（病院など）">店舗型（病院など）</option>
-                                        <option value="店舗型（風俗関係）">店舗型（風俗関係）</option>
-                                        <option value="店舗型（行政関係）">店舗型（行政関係）</option>
-                                        <option value="店舗型（その他）">店舗型（その他）</option>
-                                        <option value="無店舗型（出張サービス）">無店舗型（出張サービス）</option>
-                                        <option value="無店舗型（移動販売）">無店舗型（移動販売）</option>
-                                        <option value="その他">その他</option>
-                                    </select>
-                                </td>
-                            </tr>
+
 
                             <!--
                             <tr>
@@ -177,12 +161,28 @@ include("header.php");
                                 </th>
                                 <td><input type="text" name="shop_name" class="form-medium" placeholder="マイビジネス美容室"></td>
                             </tr>
-
                             <tr>
                                 <th>
                                     <div>業種</div>
                                 </th>
-                                <td><input type="text" name="main_cat" class="form-medium" placeholder=""></td>
+                                <td><select name="shop_cat" class="form-medium">
+                                        <option value="店舗型（エステ・美容院など）">店舗型（エステ・美容院など）</option>
+                                        <option value="店舗型（飲食関係）">店舗型（飲食関係）</option>
+                                        <option value="店舗型（病院など）">店舗型（病院など）</option>
+                                        <option value="店舗型（風俗関係）">店舗型（風俗関係）</option>
+                                        <option value="店舗型（行政関係）">店舗型（行政関係）</option>
+                                        <option value="店舗型（その他）">店舗型（その他）</option>
+                                        <option value="無店舗型（出張サービス）">無店舗型（出張サービス）</option>
+                                        <option value="無店舗型（移動販売）">無店舗型（移動販売）</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>具体的な業種</div>
+                                </th>
+                                <td><input type="text" name="main_cat" class="form-medium" placeholder="美容院"></td>
                             </tr>
 
                             <tr>
@@ -211,7 +211,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>電話番号</div>
+                                    <div>電話番号<span class="content-biko">予約などに使われるお電話番号をご記載ください</span></div>
                                 </th>
                                 <td><input type="text" name="shop_phone" class="form-medium" placeholder=""></td>
                             </tr>
@@ -253,7 +253,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>ビジネスの説明</div>
+                                    <div>お店の概要など</div>
                                 </th>
                                 <td><textarea name="description" class="form-large text-large" maxlength="750" placeholder="※750字以内"></textarea></td>
                             </tr>
@@ -265,9 +265,9 @@ include("header.php");
                 </div>
             </form>
         </div>
-        
-<!--        ベーシックコース-->
-        
+
+        <!--        ベーシックコース-->
+
         <div id="secondBox">
             <form action="" method="post" id="form2">
                 <input type="hidden" value="ベーシック">
@@ -285,42 +285,12 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>担当者電話</div>
+                                    <div>担当者電話<span class="content-biko">必ず運用を担当する方に直接つながるお電話番号を記載ください。</span></div>
                                 </th>
                                 <td><input type="tel" name="person_phone" class="form-medium" placeholder="" required></td>
                             </tr>
 
-                            <tr>
-                                <th>
-                                    <div>業種</div>
-                                </th>
-                                <td><select name="shop_cat" class="form-medium" required>
-                                        <option value="店舗型（エステ・美容院など）">店舗型（エステ・美容院など）</option>
-                                        <option value="店舗型（エステ・美容院など）">店舗型（飲食関係）</option>
-                                        <option value="店舗型（病院など）">店舗型（病院など）</option>
-                                        <option value="店舗型（風俗関係）">店舗型（風俗関係）</option>
-                                        <option value="店舗型（行政関係）">店舗型（行政関係）</option>
-                                        <option value="店舗型（その他）">店舗型（その他）</option>
-                                        <option value="無店舗型（出張サービス）">無店舗型（出張サービス）</option>
-                                        <option value="無店舗型（移動販売）">無店舗型（移動販売）</option>
-                                        <option value="その他">その他</option>
-                                    </select>
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <th>
-                                    <div>お店の特徴・強み<span class="bikou"><br>(理由と共に３つ以上)</span></div>
-                                </th>
-                                <td><textarea name="shop_str" class="form-large text-large" placeholder="" required></textarea></td>
-                            </tr>
-
-                            <tr>
-                                <th>
-                                    <div>利用してほしくないキーワード</div>
-                                </th>
-                                <td><input type="text" name="ng_key" class="form-medium" placeholder="激安,ファミリー,大混雑" required></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -393,7 +363,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>マイビジネスID<span class="content-biko">おまかせプランの方は連絡先メールアドレスでもOK</span></div>
+                                    <div>マイビジネスID<span class="content-biko">必ずgmailアドレスをご記載ください。</span></div>
                                 </th>
                                 <td><input type="email" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
                             </tr>
@@ -411,12 +381,28 @@ include("header.php");
                                 </th>
                                 <td><input type="text" name="shop_name" class="form-medium" placeholder="マイビジネス美容室" required></td>
                             </tr>
-
                             <tr>
                                 <th>
                                     <div>業種</div>
                                 </th>
-                                <td><input type="text" name="main_cat" class="form-medium" placeholder="" required></td>
+                                <td><select name="shop_cat" class="form-medium" required>
+                                        <option value="店舗型（エステ・美容院など）">店舗型（エステ・美容院など）</option>
+                                        <option value="店舗型（飲食関係）">店舗型（飲食関係）</option>
+                                        <option value="店舗型（病院など）">店舗型（病院など）</option>
+                                        <option value="店舗型（風俗関係）">店舗型（風俗関係）</option>
+                                        <option value="店舗型（行政関係）">店舗型（行政関係）</option>
+                                        <option value="店舗型（その他）">店舗型（その他）</option>
+                                        <option value="無店舗型（出張サービス）">無店舗型（出張サービス）</option>
+                                        <option value="無店舗型（移動販売）">無店舗型（移動販売）</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>具体的な業種</div>
+                                </th>
+                                <td><input type="text" name="main_cat" class="form-medium" placeholder="美容院" required></td>
                             </tr>
 
                             <tr>
@@ -428,7 +414,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>住所<span class="content-biko">ビル名まで正確に入力
+                                    <div>住所<span class="content-biko">必ずすべて正確に入力ください
                                         </span></div>
                                 </th>
                                 <td><input type="text" name="add" class="form-large" placeholder="" required></td>
@@ -443,16 +429,34 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>電話番号</div>
+                                    <div>電話番号<span class="content-biko">必ず予約などに使われるお電話番号をご記載ください</span></div>
                                 </th>
                                 <td><input type="text" name="shop_phone" class="form-medium" placeholder="" required></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>店舗のサイトまたはURL<span class="content-biko">その他の店舗のサイトまたはURL（ある場合のみ）ない場合は空欄</span></div>
+                                </th>
+                                <td><input type="url" name="home_page" class="form-medium" placeholder="" required></td>
                             </tr>
 
                             <tr>
                                 <th>
-                                    <div>ホームページURL</div>
+                                    <div>その他の店舗のサイトまたはURL<span class="content-biko">その他の店舗のサイトまたはURL（ある場合のみ）ない場合は空欄</span></div>
                                 </th>
-                                <td><input type="url" name="home_page" class="form-medium" placeholder="" required></td>
+                                <td><input type="url" name="home_page2" class="form-medium" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>お客様のサービス提供ターゲットの最寄り駅名</div>
+                                </th>
+                                <td><input type="text" name="station" class="form-medium" placeholder="新宿駅" 　required></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>【複数ある場合】お客様のサービス提供ターゲットの最寄り駅名</div>
+                                </th>
+                                <td><input type="text" name="station" class="form-medium" placeholder="西武新宿駅"></td>
                             </tr>
 
                             <tr>
@@ -480,10 +484,22 @@ include("header.php");
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <th>
+                                    <div>お店の特徴・強み<span class="content-biko">理由と共に3つ以上記載してください</span></div>
+                                </th>
+                                <td><textarea name="shop_str" class="form-large text-large" placeholder="" required></textarea></td>
+                            </tr>
 
                             <tr>
                                 <th>
-                                    <div>ビジネスの説明</div>
+                                    <div>利用してほしくないキーワード<span class="content-biko">複数ある場合はカンマを入れてご入力ください</span></div>
+                                </th>
+                                <td><input type="text" name="ng_key" class="form-medium" placeholder="激安,ファミリー,大混雑" required></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>一番人気商品、またサービスの詳細<span class="content-biko">飲食であれば料理レシピや作り方<br>エステ・美容院などであれば施術内容や時間、施術効果を細かく魅力的に説明をしてください</span></div>
                                 </th>
                                 <td><textarea name="description" class="form-large text-large" maxlength="750" placeholder="※750字以内" required></textarea></td>
                             </tr>
