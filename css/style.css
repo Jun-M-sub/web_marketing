@@ -36,7 +36,7 @@ h1 {
 
 @media screen and (max-width:768px) {
     h1 {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     h2 {
@@ -129,6 +129,10 @@ table {
     box-shadow: 2px 2px 4px -2px gray;
 }
 
+td {
+    padding: 12px !important;
+}
+
 .table-contactform7 {
     overflow: hidden;
     table-layout: fixed;
@@ -157,12 +161,12 @@ table {
 .table-contactform7 input,
 .table-contactform7 textarea {
     max-width: 90% !important;
-    margin: 5px 10px 10px 5px;
+    margin: 5px 10px 10px 0;
 }
 
 .address-100 input {
     max-width: 90% !important;
-    margin: 5px 10px 10px 5px;
+    margin: 5px 10px 10px 0;
 }
 
 .message-100 textarea {
@@ -213,7 +217,7 @@ table {
 }
 
 select {
-    margin: 5px 10px 10px 5px;
+    margin: 5px 10px 10px 0;
 }
 
 select,
@@ -362,7 +366,7 @@ tr {
 
 
 @media screen and (max-width: 768px) {
-    .plan-pack b{
+    .plan-pack b {
         font-size: 15px !important;
     }
 }
@@ -371,4 +375,72 @@ tr {
     font-weight: 100;
     font-size: 12px;
     display: block;
+}
+
+.btn-inner p {
+    font-weight: bold;
+}
+
+.next-confirm-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-left: solid 4px #00BB00;
+    border-right: solid 4px #00BB00;
+    color: #00BB00;
+    background: #e1f3ff;
+    transition: .4s;
+    width: 150px;
+}
+
+.next-confirm-btn:hover {
+    background: #00BB00;
+    color: #FFF;
+}
+
+.back-confirm-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-left: solid 4px #777;
+    border-right: solid 4px #777;
+    color: #777;
+    background: #ddd;
+    transition: .4s;
+    width: 150px;
+}
+
+.back-confirm-btn:hover {
+    background: #777;
+    color: #FFF;
+}
+
+/*complete.phpの編集*/
+.thanks {
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.button_top a{
+    text-decoration: none;
+}
+
+.complete_ms {
+    font-size: 22px;
+}
+
+.complete_m {
+    font-weight: bold;
+    border-bottom: 3px solid #36509a;
+    margin-left: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .complete_ms{
+        font-size: 17px;
+    }
 }

@@ -44,7 +44,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>ご担当者電話番号<span style="color:#f00;">*</span><span class="content-biko">担当する方に直接つながるお電話番号を記載ください。</span></div>
+                                    <div>ご担当者電話番号<span class="content-biko">担当する方に直接つながるお電話番号を記載ください。</span></div>
                                 </th>
                                 <td><input type="tel" name="person_phone" class="form-medium" placeholder="090-1234-5678" required></td>
                             </tr>
@@ -60,14 +60,14 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>Gmailアドレス<span style="color:#f00;">*</span><span class="content-biko">Gmail未登録の場合、連絡先メールアドレスでOK</span></div>
+                                    <div>Gmailアドレス<span class="content-biko">Gmail未登録の場合、連絡先メールアドレスでOK</span></div>
                                 </th>
                                 <td><input type="email" id="email_1" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
                             </tr>
 
                             <tr>
                                 <th>
-                                    <div>Gmailアドレス(確認)<span style="color:#f00;">*</span></div>
+                                    <div>Gmailアドレス(確認)</div>
                                 </th>
                                 <td><input type="email" id="emailConfirm_1" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required oninput="CheckEmail_1(this)"></td>
                             </tr>
@@ -76,20 +76,20 @@ include("header.php");
                                 <th>
                                     <div>店舗名称</div>
                                 </th>
-                                <td><input type="text" name="shop_name" class="form-medium" placeholder="マイビジネス美容室"></td>
+                                <td><input type="text" name="shop_name" class="form-medium" placeholder="マイビジネス美容室" required></td>
                             </tr>
                             <tr>
                                 <th>
                                     <div>業種</div>
                                 </th>
-                                <td><input type="text" name="main_cat" class="form-medium" placeholder="美容院"></td>
+                                <td><input type="text" name="main_cat" class="form-medium" placeholder="美容院" required></td>
                             </tr>
 
                             <tr>
                                 <th>
                                     <div>郵便番号<span class="content-biko">住所自動入力</span></div>
                                 </th>
-                                <td><input type="text" name="zip_code" class="form-medium" placeholder="0190505" onKeyUp="AjaxZip3.zip2addr(this,'','add','add')"></td>
+                                <td><input type="text" name="zip_code" class="form-medium" placeholder="0190505" onKeyUp="AjaxZip3.zip2addr(this,'','add','add')" required></td>
                             </tr>
 
                             <tr>
@@ -97,7 +97,7 @@ include("header.php");
                                     <div>住所<span class="content-biko">ビル名まで正確に入力
                                         </span></div>
                                 </th>
-                                <td><input type="text" name="add" class="form-large" placeholder=""></td>
+                                <td><input type="text" name="add" class="form-large" placeholder="" required></td>
                             </tr>
 
                             
@@ -105,7 +105,7 @@ include("header.php");
                                 <th>
                                     <div>電話番号</div>
                                 </th>
-                                <td><input type="text" name="shop_phone" class="form-medium" placeholder=""></td>
+                                <td><input type="text" name="shop_phone" class="form-medium" placeholder="" required></td>
                             </tr>
                             <tr>
                                 <th>
@@ -126,7 +126,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>カード番号<span style="color:#f00;">*</span></div>
+                                    <div>カード番号</div>
                                 </th>
                                 <td><input type="text" name="card_num" class="form-medium" placeholder="" required></td>
                             </tr>
@@ -134,7 +134,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>有効期限<span style="color:#f00;">*</span></div>
+                                    <div>有効期限</div>
                                 </th>
                                 <td><select name="card_month" required>
                                         <option>1</option>
@@ -149,7 +149,7 @@ include("header.php");
                                         <option>10</option>
                                         <option>11</option>
                                         <option>12</option>
-                                    </select>月
+                                    </select>月 / 
                                     <select name="card_year" required>
                                         <?php 
                                         for($i=0;$i<=7;$i++){
@@ -164,7 +164,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>セキュリティコード<span style="color:#f00;">*</span></div>
+                                    <div>セキュリティコード</div>
                                 </th>
                                 <td><input type="text" name="card_code" class="form-medium" placeholder="" required></td>
                             </tr>
@@ -172,7 +172,7 @@ include("header.php");
 
                             <tr>
                                 <th>
-                                    <div>カード名義<span style="color:#f00;">*</span></div>
+                                    <div>カード名義</div>
                                 </th>
                                 <td><input type="text" name="card_name" class="form-medium" placeholder="" required></td>
                             </tr>
@@ -309,7 +309,7 @@ include("header.php");
                                 <th>
                                     <div>お客様のサービス提供ターゲットの最寄り駅名</div>
                                 </th>
-                                <td><input type="text" name="station" class="form-medium" placeholder="新宿駅" 　required></td>
+                                <td><input type="text" name="station" class="form-medium" placeholder="新宿駅" required></td>
                             </tr>
                             <tr>
                                 <th>
@@ -374,7 +374,7 @@ include("header.php");
                                         <option>10</option>
                                         <option>11</option>
                                         <option>12</option>
-                                    </select>月
+                                    </select>月 / 
                                     <select name="card_year" required>
                                         <?php 
                                         for($i=0;$i<=7;$i++){
