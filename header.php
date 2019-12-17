@@ -77,6 +77,37 @@
             }
         }
 
+        <!--
+        function CheckEmail_1(input) {
+            //IE対応の為変更
+            //var mail = email_2.value; //メールフォームの値を取得
+            var mail = document.getElementById("email_1").value; //メールフォームの値を取得
+            var mailConfirm = input.value; //メール確認用フォームの値を取得(引数input)
+
+            // パスワードの一致確認
+            if (mail != mailConfirm) {
+                input.setCustomValidity('メールアドレスが一致しません'); // エラーメッセージのセット
+            } else {
+                input.setCustomValidity(''); // エラーメッセージのクリア
+            }
+        }
+        // -->
+        <!--
+        function CheckEmail_2(input) {
+            //IE対応の為変更
+            //var mail = email_2.value; //メールフォームの値を取得
+            var mail = document.getElementById("email_2").value; //メールフォームの値を取得
+            var mailConfirm = input.value; //メール確認用フォームの値を取得(引数input)
+
+            // パスワードの一致確認
+            if (mail != mailConfirm) {
+                input.setCustomValidity('メールアドレスが一致しません'); // エラーメッセージのセット
+            } else {
+                input.setCustomValidity(''); // エラーメッセージのクリア
+            }
+        }
+        // -->
+        
     </script>
 </head>
 

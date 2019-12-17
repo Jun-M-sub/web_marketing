@@ -30,8 +30,8 @@ include("header.php");
 
         <!--        おまかせ-->
         <div id="firstBox">
-            <form action="" method="post" id="form1">
-                <input type="hidden" value="おまかせ">
+            <form action="confirm.php" method="post" id="form1">
+                <input type="hidden" value="おまかせ" name="plan">
                 <div class="wrap">
                     <h2><i class="fas fa-map-marker-alt"></i>おまかせパックサービス情報</h2>
 
@@ -145,14 +145,14 @@ include("header.php");
                                 <th>
                                     <div>マイビジネスID<span style="color:#f00;">*</span><span class="content-biko">マイビジネス未登録の場合、連絡先メールアドレスでもOK</span></div>
                                 </th>
-                                <td><input type="email" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
+                                <td><input type="email" id="email_1" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
                             </tr>
 
                             <tr>
                                 <th>
                                     <div>マイビジネスID(確認)<span style="color:#f00;">*</span></div>
                                 </th>
-                                <td><input type="email" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required></td>
+                                <td><input type="email" id="emailConfirm_1" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required oninput="CheckEmail_1(this)"></td>
                             </tr>
 
                             <tr>
@@ -269,8 +269,8 @@ include("header.php");
         <!--        ベーシックコース-->
 
         <div id="secondBox">
-            <form action="" method="post" id="form2">
-                <input type="hidden" value="ベーシック">
+            <form action="basic_confirm.php" method="post" id="form2">
+                <input type="hidden" value="ベーシック" name="plan">
                 <div class="wrap">
                     <h2><i class="fas fa-map-marker-alt"></i>ベーシックコースサービス情報</h2>
 
@@ -365,14 +365,14 @@ include("header.php");
                                 <th>
                                     <div>マイビジネスID<span class="content-biko">必ずgmailアドレスをご記載ください。</span></div>
                                 </th>
-                                <td><input type="email" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
+                                <td><input type="email" id="email_1" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
                             </tr>
 
                             <tr>
                                 <th>
                                     <div>マイビジネスID(確認)</div>
                                 </th>
-                                <td><input type="email" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required></td>
+                                <td><input type="email" id="emailConfirm_1" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required oninput="CheckEmail_2(this)"></td>
                             </tr>
 
                             <tr>
