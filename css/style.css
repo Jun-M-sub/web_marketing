@@ -372,19 +372,3 @@ tr {
     font-size: 12px;
     display: block;
 }
-
-.plan-info1 {
-    color: #2e9b72;
-    border-bottom: solid 2px #2e9b72;
-}
-
-.plan-info2 {
-    color: #36509a;
-    border-bottom: solid 2px #36509a;
-}
-
-.plan-info1, .plan-info2 {
-    font-size: 15px;
-    margin-right: 3px;
-    margin-left: 3px;
-}
