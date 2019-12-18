@@ -224,14 +224,14 @@ include("header.php");
                                 <th>
                                     <div>Gmailアドレス<span class="content-biko">必ずgmailアドレスをご記載ください。</span></div>
                                 </th>
-                                <td><input type="email" id="email_1" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
+                                <td><input type="email" id="email_2" name="my_id" class="form-medium" placeholder="myshop@gmail.com" required></td>
                             </tr>
 
                             <tr>
                                 <th>
                                     <div>Gmailアドレス(確認)</div>
                                 </th>
-                                <td><input type="email" id="emailConfirm_1" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required oninput="CheckEmail_2(this)"></td>
+                                <td><input type="email" id="emailConfirm_2" name="my_id2" class="form-medium" placeholder="myshop@gmail.com" required oninput="CheckEmail_2(this)"></td>
                             </tr>
 
                             <tr>

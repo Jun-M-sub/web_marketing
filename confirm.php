@@ -45,7 +45,7 @@ include("header.php");
                                 <div><span class="table-contactform7">ご担当者氏名</span></div>
                             </th>
                             <td>
-                                <div class="send_content">ウォルト ディズニー　様</div>
+                                <div class="send_content"><?php print $person_name; ?>　様</div>
                             </td>
                         </tr>
                         <tr>
@@ -53,7 +53,7 @@ include("header.php");
                                 <div>ご担当者電話番号</div>
                             </th>
                             <td>
-                                <div class="send_content">090-1234-5678</div>
+                                <div class="send_content"><?php print $person_phone; ?></div>
                             </td>
                         </tr>
                     </tbody>
@@ -71,7 +71,7 @@ include("header.php");
                                 <div>Gmailアドレス</div>
                             </th>
                             <td>
-                                <div class="send_content">disney@gmail.com</div>
+                                <div class="send_content"><?php print $my_id; ?></div>
                             </td>
                         </tr>
 
@@ -81,7 +81,7 @@ include("header.php");
                                 <div>店舗名称</div>
                             </th>
                             <td>
-                                <div class="send_content">マイビジネス美容室</div>
+                                <div class="send_content"><?php print $shop_name; ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -89,7 +89,7 @@ include("header.php");
                                 <div>業種</div>
                             </th>
                             <td>
-                                <div class="send_content">美容院</div>
+                                <div class="send_content"><?php print $main_cat; ?></div>
                             </td>
                         </tr>
 
@@ -98,7 +98,7 @@ include("header.php");
                                 <div>郵便番号</div>
                             </th>
                             <td>
-                                <div class="send_content">010-0001</div>
+                                <div class="send_content"><?php print $zip_code; ?></div>
                             </td>
                         </tr>
 
@@ -107,7 +107,7 @@ include("header.php");
                                 <div>住所</div>
                             </th>
                             <td>
-                                <div class="send_content">秋田県〇〇</div>
+                                <div class="send_content"><?php print $add; ?></div>
                             </td>
                         </tr>
 
@@ -117,7 +117,7 @@ include("header.php");
                                 <div>電話番号</div>
                             </th>
                             <td>
-                                <div class="send_content">0182-42-5500</div>
+                                <div class="send_content"><?php print $shop_phone; ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -125,7 +125,7 @@ include("header.php");
                                 <div>お店の概要など</div>
                             </th>
                             <td>
-                                <div class="send_content">お店の概要</div>
+                                <div class="send_content"><?php print $description; ?></div>
                             </td>
                         </tr>
                     </tbody>
@@ -144,7 +144,7 @@ include("header.php");
                                 <div>カード番号</div>
                             </th>
                             <td>
-                                <div class="send_content">123456789</div>
+                                <div class="send_content"><?php print $card_num; ?></div>
                             </td>
                         </tr>
 
@@ -154,7 +154,7 @@ include("header.php");
                                 <div>有効期限</div>
                             </th>
                             <td>
-                                <div class="send_content">12月　/　2022年</div>
+                                <div class="send_content"><?php print $card_month; ?>月　/　<?php print $card_year; ?>年</div>
                             </td>
                         </tr>
 
@@ -164,7 +164,7 @@ include("header.php");
                                 <div>セキュリティコード</div>
                             </th>
                             <td>
-                                <div class="send_content">123</div>
+                                <div class="send_content"><?php print $card_code; ?></div>
                             </td>
                         </tr>
 
@@ -174,7 +174,7 @@ include("header.php");
                                 <div>カード名義</div>
                             </th>
                             <td>
-                                <div class="send_content">ウォルト ディズニー</div>
+                                <div class="send_content"><?php print $card_name; ?></div>
                             </td>
                         </tr>
                     </tbody>
@@ -188,7 +188,7 @@ print'<input name="person_phone" type="hidden" value="'.$person_phone.'">';
 print'<input name="my_id" type="hidden" value="'.$my_id.'">';
 print'<input name="shop_name" type="hidden" value="'.$shop_name.'">';
 print'<input name="main_cat" type="hidden" value="'.$main_cat.'">';
-print'<input name="zip_code= _POST['zip_code'];" type="hidden" value="'.$zip_code= _POST['zip_code'];.'">';
+print'<input name="zip_code" type="hidden" value="'.$zip_code.'">';
 print'<input name="add" type="hidden" value="'.$add.'">';
 print'<input name="shop_phone" type="hidden" value="'.$shop_phone.'">';
 print'<input name="description" type="hidden" value="'.$description.'">';

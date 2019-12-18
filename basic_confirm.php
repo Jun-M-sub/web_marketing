@@ -6,7 +6,6 @@ include("header.php");
         $plan = $_POST['plan'];
         $person_name = $_POST['person_name'];
         $person_phone = $_POST['person_phone'];
-        $ng_key = $_POST['ng_key'];
         $my_id = $_POST['my_id'];
         $shop_name = $_POST['shop_name'];
         $shop_cat = $_POST['shop_cat'];
@@ -53,7 +52,7 @@ include("header.php");
                                 <div><span class="table-contactform7">ご担当者氏名</span></div>
                             </th>
                             <td>
-                                <div class="send_content">ウォルト ディズニー　様</div>
+                                <div class="send_content"><?php print $person_name ?>　様</div>
                             </td>
                         </tr>
                         <tr>
@@ -61,7 +60,7 @@ include("header.php");
                                 <div>ご担当者電話番号</div>
                             </th>
                             <td>
-                                <div class="send_content">090-1234-5678</div>
+                                <div class="send_content"><?php print $person_phone ?></div>
                             </td>
                         </tr>
                     </tbody>
@@ -79,7 +78,7 @@ include("header.php");
                                 <div>Gmailアドレス</div>
                             </th>
                             <td>
-                                <div class="send_content">disney@gmail.com</div>
+                                <div class="send_content"><?php print $my_id  ?></div>
                             </td>
                         </tr>
 
@@ -89,7 +88,7 @@ include("header.php");
                                 <div>店舗名称</div>
                             </th>
                             <td>
-                                <div class="send_content">マイビジネス美容室</div>
+                                <div class="send_content"><?php print $shop_name ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -97,7 +96,7 @@ include("header.php");
                                 <div>業種選択</div>
                             </th>
                             <td>
-                                <div class="send_content">店舗型（飲食関係）</div>
+                                <div class="send_content"><?php print $shop_cat ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -105,7 +104,7 @@ include("header.php");
                                 <div>業種</div>
                             </th>
                             <td>
-                                <div class="send_content">美容院</div>
+                                <div class="send_content"><?php print $main_cat ?></div>
                             </td>
                         </tr>
 
@@ -114,7 +113,7 @@ include("header.php");
                                 <div>郵便番号</div>
                             </th>
                             <td>
-                                <div class="send_content">010-0001</div>
+                                <div class="send_content"><?php print $zip_code; ?></div>
                             </td>
                         </tr>
 
@@ -123,7 +122,7 @@ include("header.php");
                                 <div>住所</div>
                             </th>
                             <td>
-                                <div class="send_content">秋田県〇〇</div>
+                                <div class="send_content"><?php print $add ?></div>
                             </td>
                         </tr>
 
@@ -133,7 +132,7 @@ include("header.php");
                                 <div>電話番号</div>
                             </th>
                             <td>
-                                <div class="send_content">0182-42-5500</div>
+                                <div class="send_content"><?php print $shop_phone ?></div>
                             </td>
                         </tr>
 
@@ -142,7 +141,7 @@ include("header.php");
                                 <div>営業時間</div>
                             </th>
                             <td>
-                                <div class="send_content">12：00～22：00</div>
+                                <div class="send_content"><?php print $open_time ?></div>
                             </td>
                         </tr>
                          <tr>
@@ -150,7 +149,7 @@ include("header.php");
                                 <div>店舗のサイトまたはURL</div>
                             </th>
                             <td>
-                                <div class="send_content">http://photo-therapy.jp</div>
+                                <div class="send_content"><?php print $home_page; ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -158,7 +157,7 @@ include("header.php");
                                 <div>その他の店舗のサイトまたはURL</div>
                             </th>
                             <td>
-                                <div class="send_content">http://photo-therapy.jp</div>
+                                <div class="send_content"><?php print $home_page2; ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -166,7 +165,7 @@ include("header.php");
                                 <div>お客様のサービス提供ターゲットの最寄り駅名</div>
                             </th>
                             <td>
-                                <div class="send_content">新宿駅</div>
+                                <div class="send_content"><?php print $station ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -174,7 +173,7 @@ include("header.php");
                                 <div>【複数ある場合】お客様のサービス提供ターゲットの最寄り駅名</div>
                             </th>
                             <td>
-                                <div class="send_content">新宿駅</div>
+                                <div class="send_content"><?php print $station2; ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -182,7 +181,7 @@ include("header.php");
                                 <div>お店の特徴・強み</div>
                             </th>
                             <td>
-                                <div class="send_content">理由と共に3つ</div>
+                                <div class="send_content"><?php print $shop_str; ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -190,7 +189,7 @@ include("header.php");
                                 <div>利用してほしくないキーワード</div>
                             </th>
                             <td>
-                                <div class="send_content">激安,ファミリー,大混雑</div>
+                                <div class="send_content"><?php print $ng_key; ?></div>
                             </td>
                         </tr>
                         <tr>
@@ -198,7 +197,7 @@ include("header.php");
                             <div>一番人気商品、またサービスの詳細</div>
                         </th>
                         <td>
-                            <div class="send_content">エステ・美容院などであれば施術内容や時間、施術効果を細かく魅力的に説明をしてください</div>
+                            <div class="send_content"><?php print $description; ?></div>
                         </td>
                         </tr>
                     </tbody>
@@ -217,7 +216,7 @@ include("header.php");
                                 <div>カード番号</div>
                             </th>
                             <td>
-                                <div class="send_content">123456789</div>
+                                <div class="send_content"><?php print $plan; ?></div>
                             </td>
                         </tr>
 
@@ -227,7 +226,7 @@ include("header.php");
                                 <div>有効期限</div>
                             </th>
                             <td>
-                                <div class="send_content">12月　/　2022年</div>
+                                <div class="send_content"><?php print $plan; ?>月　/　<?php print $plan; ?>年</div>
                             </td>
                         </tr>
 
@@ -237,7 +236,7 @@ include("header.php");
                                 <div>セキュリティコード</div>
                             </th>
                             <td>
-                                <div class="send_content">123</div>
+                                <div class="send_content"><?php print $plan; ?></div>
                             </td>
                         </tr>
 
@@ -247,7 +246,7 @@ include("header.php");
                                 <div>カード名義</div>
                             </th>
                             <td>
-                                <div class="send_content">ウォルト ディズニー</div>
+                                <div class="send_content"><?php print $plan; ?></div>
                             </td>
                         </tr>
                     </tbody>
