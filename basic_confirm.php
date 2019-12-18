@@ -6,13 +6,22 @@ include("header.php");
         $plan = $_POST['plan'];
         $person_name = $_POST['person_name'];
         $person_phone = $_POST['person_phone'];
+        $ng_key = $_POST['ng_key'];
         $my_id = $_POST['my_id'];
         $my_id2 = $_POST['my_id2'];
         $shop_name = $_POST['shop_name'];
+        $shop_cat = $_POST['shop_cat'];
         $main_cat = $_POST['main_cat'];
         $zip_code= $_POST['zip_code'];
         $add = $_POST['add'];
         $shop_phone = $_POST['shop_phone'];
+        $open_time = $_POST['open_time'];
+        $home_page = $_POST['home_page'];
+        $home_page2 = $_POST['home_page2'];
+        $station = $_POST['station'];
+        $station2 = $_POST['station2'];
+        $shop_str = $_POST['shop_str'];
+        $ng_key = $_POST['ng_key'];
         $description = $_POST['description'];
         $card_num = $_POST['card_num'];
         $card_month = $_POST['card_month'];
@@ -79,6 +88,14 @@ include("header.php");
                         </tr>
                         <tr>
                             <th>
+                                <div>業種選択</div>
+                            </th>
+                            <td>
+                                <div class="send_content">店舗型（飲食関係）</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
                                 <div>業種</div>
                             </th>
                             <td>
@@ -113,13 +130,70 @@ include("header.php");
                                 <div class="send_content">0182-42-5500</div>
                             </td>
                         </tr>
+
                         <tr>
                             <th>
-                                <div>お店の概要など</div>
+                                <div>営業時間</div>
                             </th>
                             <td>
-                                <div class="send_content">お店の概要</div>
+                                <div class="send_content">12：00～22：00</div>
                             </td>
+                        </tr>
+                         <tr>
+                            <th>
+                                <div>店舗のサイトまたはURL</div>
+                            </th>
+                            <td>
+                                <div class="send_content">http://photo-therapy.jp</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div>その他の店舗のサイトまたはURL</div>
+                            </th>
+                            <td>
+                                <div class="send_content">http://photo-therapy.jp</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div>お客様のサービス提供ターゲットの最寄り駅名</div>
+                            </th>
+                            <td>
+                                <div class="send_content">新宿駅</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div>【複数ある場合】お客様のサービス提供ターゲットの最寄り駅名</div>
+                            </th>
+                            <td>
+                                <div class="send_content">新宿駅</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div>お店の特徴・強み</div>
+                            </th>
+                            <td>
+                                <div class="send_content">理由と共に3つ</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div>利用してほしくないキーワード</div>
+                            </th>
+                            <td>
+                                <div class="send_content">激安,ファミリー,大混雑</div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <th>
+                            <div>一番人気商品、またサービスの詳細</div>
+                        </th>
+                        <td>
+                            <div class="send_content">エステ・美容院などであれば施術内容や時間、施術効果を細かく魅力的に説明をしてください</div>
+                        </td>
                         </tr>
                     </tbody>
                 </table>
@@ -172,9 +246,9 @@ include("header.php");
                         </tr>
                     </tbody>
                 </table>
-<form action="complete.php" method="post">
 
-                <?php
+<form action="basic_complete.php" method="post">
+                <?php   
                 print'<input name="plan" type="hidden" value="'.$plan.'">';
                 print'<input name="person_name" type="hidden" value="'.$person_name.'">';
                 print'<input name="person_phone" type="hidden" value="'.$person_phone.'">';
@@ -202,7 +276,11 @@ include("header.php");
 
                     <input class="next-confirm-btn" type="submit" name="submit" value="送信">
                 </div>
+
+
+
                 </form>
+
             </div>
         </div>
     </div>

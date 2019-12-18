@@ -278,6 +278,13 @@ include("header.php");
                                 </th>
                                 <td><input type="text" name="add" class="form-large" placeholder="" required></td>
                             </tr>
+                            
+                            <tr>
+                                <th>
+                                    <div>電話番号<span class="content-biko">予約などに使われるお電話番号をご記載ください</span></div>
+                                </th>
+                                <td><input type="text" name="shop_phone" class="form-medium" placeholder="" required></td>
+                            </tr>
 
                             <tr>
                                 <th>
@@ -286,12 +293,7 @@ include("header.php");
                                 <td><input type="text" name="open_time" class="form-medium" placeholder="" required></td>
                             </tr>
 
-                            <tr>
-                                <th>
-                                    <div>電話番号<span class="content-biko">予約などに使われるお電話番号をご記載ください</span></div>
-                                </th>
-                                <td><input type="text" name="shop_phone" class="form-medium" placeholder="" required></td>
-                            </tr>
+                            
                             <tr>
                                 <th>
                                     <div>店舗のサイトまたはURL<span class="content-biko">その他の店舗のサイトまたはURL（ある場合のみ）ない場合は空欄</span></div>
@@ -315,7 +317,7 @@ include("header.php");
                                 <th>
                                     <div>【複数ある場合】お客様のサービス提供ターゲットの最寄り駅名</div>
                                 </th>
-                                <td><input type="text" name="station" class="form-medium" placeholder="西武新宿駅"></td>
+                                <td><input type="text" name="station2" class="form-medium" placeholder="西武新宿駅"></td>
                             </tr>
 
                             <tr>

@@ -421,8 +421,9 @@ tr {
 
 /*complete.phpの編集*/
 .thanks {
-    margin-left: 40px;
-    margin-bottom: 30px;
+    font-size: 13px;
+    margin-bottom: 50px;
+    margin-left: 10px;
 }
 
 .button_top a{
@@ -431,12 +432,13 @@ tr {
 
 .complete_ms {
     font-size: 22px;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .complete_m {
     font-weight: bold;
     border-bottom: 3px solid #36509a;
-    margin-left: 40px;
 }
 
 @media screen and (max-width: 900px) {
