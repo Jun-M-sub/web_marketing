@@ -8,7 +8,6 @@ include("header.php");
         $person_phone = $_POST['person_phone'];
         $ng_key = $_POST['ng_key'];
         $my_id = $_POST['my_id'];
-        $my_id2 = $_POST['my_id2'];
         $shop_name = $_POST['shop_name'];
         $shop_cat = $_POST['shop_cat'];
         $main_cat = $_POST['main_cat'];
@@ -38,6 +37,13 @@ include("header.php");
     </div>
     <div class="main-inner">
         <div id="firstBox">
+            <div class="wrap">
+                <h2><i class="fas fa-map-marker-alt"></i>プラン</h2>
+                <div class="cp_ipradio row">
+
+                    <div class="plan-pack"><b>→MEOベーシックコース</b></div>
+                </div>
+            </div>
             <div class="wrap">
                 <h2><i class="fas fa-map-marker-alt"></i>ご担当者情報</h2>
                 <table class="table table-bordered table-striped table-contactform7">
@@ -249,25 +255,31 @@ include("header.php");
 
 <form action="basic_complete.php" method="post">
                 <?php   
-                print'<input name="plan" type="hidden" value="'.$plan.'">';
-                print'<input name="person_name" type="hidden" value="'.$person_name.'">';
-                print'<input name="person_phone" type="hidden" value="'.$person_phone.'">';
-                print'<input name="shop_cat" type="hidden" value="'.$shop_cat.'">';
-                print'<input name="shop_str" type="hidden" value="'.$shop_str.'">';
-                print'<input name="ng_key" type="hidden" value="'.$ng_key.'">';
-                print'<input name="card_num" type="hidden" value="'.$card_num.'">';
-                print'<input name="card_time" type="hidden" value="'.$card_time.'">';
-                print'<input name="card_code" type="hidden" value="'.$card_code.'">';
-                print'<input name="card_name" type="hidden" value="'.$card_name.'">';
-                print'<input name="my_id" type="hidden" value="'.$my_id.'">';
-                print'<input name="shop_name" type="hidden" value="'.$shop_name.'">';
-                print'<input name="main_cat" type="hidden" value="'.$main_cat.'">';
-                print'<input name="zip_code" type="hidden" value="'.$zip_code.'">';
-                print'<input name="add" type="hidden" value="'.$add.'">';
-                print'<input name="open_time" type="hidden" value="'.$open_time.'">';
-                print'<input name="shop_phone" type="hidden" value="'.$shop_phone.'">';
-                print'<input name="home_page" type="hidden" value="'.$home_page.'">';
-                print'<input name="payment" type="hidden" value="'.$payment.'">';
+print'<input name="plan" type="hidden" value="'.$plan.'">';
+print'<input name="person_name" type="hidden" value="'.$person_name.'">';
+print'<input name="person_phone" type="hidden" value="'.$person_phone.'">';
+print'<input name="ng_key" type="hidden" value="'.$ng_key.'">';
+print'<input name="my_id" type="hidden" value="'.$my_id.'">';
+print'<input name="shop_name" type="hidden" value="'.$shop_name.'">';
+print'<input name="shop_cat" type="hidden" value="'.$shop_cat.'">';
+print'<input name="main_cat" type="hidden" value="'.$main_cat.'">';
+print'<input name="zip_code" type="hidden" value="'.$zip_code.'">';
+print'<input name="add" type="hidden" value="'.$add.'">';
+print'<input name="shop_phone" type="hidden" value="'.$shop_phone.'">';
+print'<input name="open_time" type="hidden" value="'.$open_time.'">';
+print'<input name="home_page" type="hidden" value="'.$home_page.'">';
+print'<input name="home_page2" type="hidden" value="'.$home_page2.'">';
+print'<input name="station" type="hidden" value="'.$station.'">';
+print'<input name="station2" type="hidden" value="'.$station2.'">';
+print'<input name="shop_str" type="hidden" value="'.$shop_str.'">';
+print'<input name="ng_key" type="hidden" value="'.$ng_key.'">';
+print'<input name="description" type="hidden" value="'.$description.'">';
+print'<input name="card_num" type="hidden" value="'.$card_num.'">';
+print'<input name="card_month" type="hidden" value="'.$card_month.'">';
+print'<input name="card_year" type="hidden" value="'.$card_year.'">';
+print'<input name="card_code" type="hidden" value="'.$card_code.'">';
+print'<input name="card_name" type="hidden" value="'.$card_name.'">';
+
                             ?>
 
                 <div class="btn-inner">

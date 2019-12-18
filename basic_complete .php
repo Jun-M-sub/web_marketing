@@ -39,7 +39,7 @@ include("header.php");
         <div id="firstBox">
             <div class="wrap">
                 <h2>お申込みありがとうございました。</h2>
-                <p class="complete_ms"><span class="complete_m">MEOおまかせパック</span>へのお申込みが完了いたしました。</p>
+                <p class="complete_ms"><span class="complete_m">ベーシックコース</span>へのお申込みが完了いたしました。</p>
                 <p class="thanks">ご登録のGmailアドレスにメールを送信いたしましたのでご確認をお願いします。</p>
                 
                 <div class="btn-inner">
