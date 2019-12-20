@@ -27,6 +27,8 @@ include("header.php");
         $card_code = $_POST['card_code'];
         $card_name = $_POST['card_name'];
 ?>
+
+
 <main>
     <div class="main-first">
         <div class="img">
@@ -216,7 +218,7 @@ include("header.php");
                                 <div>カード番号</div>
                             </th>
                             <td>
-                                <div class="send_content"><?php print $plan; ?></div>
+                                <div class="send_content"><?php print $card_num; ?></div>
                             </td>
                         </tr>
 
@@ -226,7 +228,7 @@ include("header.php");
                                 <div>有効期限</div>
                             </th>
                             <td>
-                                <div class="send_content"><?php print $plan; ?>月　/　<?php print $plan; ?>年</div>
+                                <div class="send_content"><?php print $card_month; ?>月　/　<?php print $card_year; ?>年</div>
                             </td>
                         </tr>
 
@@ -236,7 +238,7 @@ include("header.php");
                                 <div>セキュリティコード</div>
                             </th>
                             <td>
-                                <div class="send_content"><?php print $plan; ?></div>
+                                <div class="send_content"><?php print $card_code; ?></div>
                             </td>
                         </tr>
 
@@ -246,7 +248,7 @@ include("header.php");
                                 <div>カード名義</div>
                             </th>
                             <td>
-                                <div class="send_content"><?php print $plan; ?></div>
+                                <div class="send_content"><?php print $card_name; ?></div>
                             </td>
                         </tr>
                     </tbody>
