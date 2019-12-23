@@ -5,7 +5,7 @@
     $dbh = new PDO($dsn,$user,$password);
     $dbh->query('SET NAMES utf8');
     
-    $sql = 'SELECT * FROM `omakase_form` ORDER BY date DESC';
+    $sql = 'SELECT * FROM `basic_form` ORDER BY date DESC';
 
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
@@ -56,7 +56,7 @@
             <div class="img">
                 <img src="img/image823.png">
             </div>
-            <h1 class="shosai_h1">おまかせパック申込一覧</h1>
+            <h1 class="shosai_h1">ベーシックコース申込一覧</h1>
         </div>
         <div class="main-inner">
             <table>
@@ -71,7 +71,7 @@
                     <td><?php echo $me['person_name']; ?></td>
                     <td><?php echo date("Y年m月d日H時i分",strtotime($me['date'])); ?></td>
                     <td><?php echo $me['shop_name']; ?></td>
-                    <td><a href="shosai.php?id=<?php echo $me['id']; ?>">詳細</a></td>
+                    <td><a href="basic_shosai.php?id=<?php echo $me['id']; ?>">詳細</a></td>
                 </tr>
                 <?php } ?>
 
