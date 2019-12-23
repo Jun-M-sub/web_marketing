@@ -446,3 +446,24 @@ tr {
         font-size: 17px;
     }
 }
+
+.shosai {
+    border: solid #444 1px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.shosai dt, .shosai dd {
+    border-bottom: 1px solid #555;
+    padding: 5px;
+    margin: 0;
+}
+
+.border-none {
+    border-bottom: 0 !important;
+}
+
+.shosai dt {
+    background: #ccc;
+    border-right: 1px solid #555;
+}
