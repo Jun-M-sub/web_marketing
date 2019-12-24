@@ -3,21 +3,21 @@ include("header.php");
 ?>
 
 <?php
-        $plan = $_POST['plan'];
-        $person_name = $_POST['person_name'];
-        $person_phone = $_POST['person_phone'];
-        $my_id = $_POST['my_id'];
-        $shop_name = $_POST['shop_name'];
-        $main_cat = $_POST['main_cat'];
-        $zip_code= $_POST['zip_code'];
-        $add = $_POST['add'];
-        $shop_phone = $_POST['shop_phone'];
-        $description = $_POST['description'];
-        $card_num = $_POST['card_num'];
-        $card_month = $_POST['card_month'];
-        $card_year = $_POST['card_year'];
-        $card_code = $_POST['card_code'];
-        $card_name = $_POST['card_name'];
+        $plan = htmlspecialchars($_POST['plan']);
+        $person_name = htmlspecialchars($_POST['person_name']);
+        $person_phone = htmlspecialchars($_POST['person_phone']);
+        $my_id = htmlspecialchars($_POST['my_id']);
+        $shop_name = htmlspecialchars($_POST['shop_name']);
+        $main_cat = htmlspecialchars($_POST['main_cat']);
+        $zip_code= htmlspecialchars($_POST['zip_code']);
+        $add = htmlspecialchars($_POST['add']);
+        $shop_phone = htmlspecialchars($_POST['shop_phone']);
+        $description = htmlspecialchars($_POST['description']);
+        $card_num = htmlspecialchars($_POST['card_num']);
+        $card_month = htmlspecialchars($_POST['card_month']);
+        $card_year = htmlspecialchars($_POST['card_year']);
+        $card_code = htmlspecialchars($_POST['card_code']);
+        $card_name = htmlspecialchars($_POST['card_name']);
 ?>
 <main>
     <div class="main-first">
