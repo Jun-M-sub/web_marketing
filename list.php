@@ -56,7 +56,10 @@ if($user_name == "rinsendo" && $pass_word == "rinsendo5500"){ ?>
                 <th>店舗名</th>
                 <th>詳細</th>
             </tr>
-            <?php foreach($stmt as $me){ ?>
+            <?php foreach($stmt as $me){ 
+        foreach($me as $value => $key){
+            $value = htmlspecialchars($key);
+        } ?>
             <tr>
                 <td><?php echo $me['person_name']; ?></td>
                 <td><?php echo date("Y年m月d日H時i分",strtotime($me['date'])); ?></td>
@@ -67,7 +70,7 @@ if($user_name == "rinsendo" && $pass_word == "rinsendo5500"){ ?>
 
         </table>
         <div class="btn-inner"><input class="next-confirm-btn" type="button" onclick="location.href='basic_list.php'" value="ベーシック">
-            <input class="back-confirm-btn" type="button" onclick="location.href='index.php'" value="ログイン">
+            <input class="back-confirm-btn" type="button" onclick="location.href='login.php'" value="ログイン">
         </div>
     </div>
 </main>

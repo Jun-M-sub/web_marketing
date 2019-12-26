@@ -70,7 +70,7 @@ if($user_name == "rinsendo" && $pass_word == "rinsendo5500"){ ?>
 
             </table>
             <div class="btn-inner"><input class="next-confirm-btn" type="button" onclick="location.href='list.php'" value="おまかせ">
-                <input class="back-confirm-btn" type="button" onclick="location.href='index.php'" value="ログイン">
+                <input class="back-confirm-btn" type="button" onclick="location.href='login.php'" value="ログイン">
             </div>
         </div>
     </main>

@@ -19,6 +19,9 @@ $id = $_GET['id'];
     
 
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+    foreach($rec as $key => $value){
+            $rec[$key] = htmlspecialchars($value);
+        }
 ?>
 
 <main>
@@ -91,10 +94,10 @@ $id = $_GET['id'];
         </dl>
 
 
-   <div class="btn-inner"><input class="back-confirm-btn" type="button" onclick="history.back()" value="戻る"></div>
+        <div class="btn-inner"><input class="back-confirm-btn" type="button" onclick="history.back()" value="戻る"></div>
     </div>
 </main>
-     <?php $dbh =null; ?>
+<?php $dbh =null; ?>
 <?php }else{?>
 <main>
     <div class="main-first">
