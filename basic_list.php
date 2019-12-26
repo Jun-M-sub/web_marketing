@@ -1,29 +1,9 @@
+<?php include("header.php") ?>
 <?php 
-    $dsn = 'mysql:dbname=meoform;host=localhost';
-    $user = 'root';
-    $password ='';
-    $dbh = new PDO($dsn,$user,$password);
-    $dbh->query('SET NAMES utf8');
-    
-    $sql = 'SELECT * FROM `basic_form` ORDER BY date DESC';
+$user_name = $_SESSION['user_name'];
+$pass_word = $_SESSION['pass_word'];
 
-    $stmt = $dbh->prepare($sql);
-    $stmt->execute();
-    ?>
-
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>店舗一覧</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+if($user_name == "rinsendo" && $pass_word == "rinsendo5500"){ ?>
 
 <body>
     <style>
@@ -51,6 +31,19 @@
         }
 
     </style>
+    <?php 
+    $dsn = 'mysql:dbname=meoform;host=localhost';
+    $user = 'root';
+    $password ='';
+    $dbh = new PDO($dsn,$user,$password);
+    $dbh->query('SET NAMES utf8');
+    
+    $sql = 'SELECT * FROM `basic_form` ORDER BY date DESC';
+
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    ?>
+
     <main>
         <div class="main-first">
             <div class="img">
@@ -76,8 +69,23 @@
                 <?php } ?>
 
             </table>
+            <div class="btn-inner"><input class="next-confirm-btn" type="button" onclick="location.href='list.php'" value="おまかせ">
+                <input class="back-confirm-btn" type="button" onclick="location.href='index.php'" value="ログイン">
+            </div>
         </div>
     </main>
-</body>
-
-</html>
+    <?php }else{?>
+    <main>
+        <div class="main-first">
+            <div class="img">
+                <img src="img/image823.png">
+            </div>
+            <h1>アクセスエラー</h1>
+        </div>
+        <div class="main-inner">
+            <p>不正なアクセスです。</p>
+            <div class="btn-inner"><input class="back-confirm-btn" type="button" onclick="history.back()" value="戻る"></div>
+        </div>
+    </main>
+    <?php } ?>
+    <?php include("footer.php"); ?>

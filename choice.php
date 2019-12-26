@@ -2,8 +2,17 @@
 include("header.php");
 ?>
 
+
 <?php 
-if(($_POST['user_name'] == "rinsendo") && ($_POST['pass'] == "rinsendo5500")){ ?>
+
+$user_name = $_POST['user_name'];
+$pass_word = $_POST['pass'];
+
+//    セッションにユーザー名とパスを登録する
+    $_SESSION['user_name'] = $user_name;
+    $_SESSION['pass_word'] = $pass_word;
+
+if(($user_name == "rinsendo") && ($pass_word == "rinsendo5500")){ ?>
 
 <main>
     <div class="main-first">
@@ -18,7 +27,9 @@ if(($_POST['user_name'] == "rinsendo") && ($_POST['pass'] == "rinsendo5500")){ ?
     </div>
 </main>
 
+
 <?php 
+
 }else{ ?>
     <main>
          <div class="main-first">

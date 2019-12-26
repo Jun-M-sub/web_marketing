@@ -1,3 +1,9 @@
+<?php include("header.php") ?>
+<?php 
+$user_name = $_SESSION['user_name'];
+$pass_word = $_SESSION['pass_word'];
+
+if($user_name == "rinsendo" && $pass_word == "rinsendo5500"){ ?>
 <?php
 $id = $_GET['id']; 
     $dsn = 'mysql:dbname=meoform;host=localhost';
@@ -14,21 +20,6 @@ $id = $_GET['id'];
 
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>店舗ページ</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
     <main>
         <div class="main-first">
             <div class="img">
@@ -90,7 +81,17 @@ $dbh =null;
 ?><div class="btn-inner"><input class="back-confirm-btn" type="button" onclick="history.back()" value="戻る"></div>
         </div>
     </main>
-
-</body>
-
-</html>
+<?php }else{?>
+ <main>
+         <div class="main-first">
+        <div class="img">
+            <img src="img/image823.png">
+        </div>
+        <h1>アクセスエラー</h1>
+    </div>
+    <div class="main-inner">
+        <p>不正なアクセスです。</p>
+    </div>
+</main>
+<?php } ?>
+<?php include("footer.php"); ?>
