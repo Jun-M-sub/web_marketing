@@ -59,7 +59,10 @@ if($user_name == "rinsendo" && $pass_word == "rinsendo5500"){ ?>
                     <th>店舗名</th>
                     <th>詳細</th>
                 </tr>
-                <?php foreach($stmt as $me){ ?>
+                <?php foreach($stmt as $me){ 
+        foreach($me as $key => $value){
+            $me[$key] = htmlspecialchars($value);
+        } ?>
                 <tr>
                     <td><?php echo $me['person_name']; ?></td>
                     <td><?php echo date("Y年m月d日H時i分",strtotime($me['date'])); ?></td>

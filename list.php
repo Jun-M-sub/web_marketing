@@ -57,8 +57,8 @@ if($user_name == "rinsendo" && $pass_word == "rinsendo5500"){ ?>
                 <th>詳細</th>
             </tr>
             <?php foreach($stmt as $me){ 
-        foreach($me as $value => $key){
-            $value = htmlspecialchars($key);
+        foreach($me as $key => $value){
+            $me[$key] = htmlspecialchars($value);
         } ?>
             <tr>
                 <td><?php echo $me['person_name']; ?></td>
