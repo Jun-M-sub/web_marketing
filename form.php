@@ -14,7 +14,7 @@ include("header.php");
             <div class="cp_ipradio row">
                 <label class="label-title col-md-6" for="d_rb1">
                     <input type="radio" name="plan" value="おまかせ" checked="checked" class="radio" onclick="entryChange1();">
-                    <div class="plan-pack"><b>MEOおまかせパック<br>月額 19,800円 + 10,000円</b><span class="plan-biko1">安心！オススメ！！</span></div>
+                    <div class="plan-pack"><b>MEOおまかせパック<br>月額 29,800円 </b><span class="plan-biko1">安心！オススメ！！</span></div>
                     <p>マイビジネスの整備から開始後のメンテナンスまですべてお任せ。</p>
                 </label>
 
