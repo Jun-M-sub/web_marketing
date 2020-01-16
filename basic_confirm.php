@@ -26,6 +26,7 @@ include("header.php");
         $card_year = htmlspecialchars($_POST['card_year']);
         $card_code = htmlspecialchars($_POST['card_code']);
         $card_name = htmlspecialchars($_POST['card_name']);
+        $get_id = htmlspecialchars($_POST['get_id']);
 ?>
 
 
@@ -146,7 +147,7 @@ include("header.php");
                                 <div class="send_content"><?php print $open_time ?></div>
                             </td>
                         </tr>
-                         <tr>
+                        <tr>
                             <th>
                                 <div>店舗のサイトまたはURL</div>
                             </th>
@@ -195,12 +196,12 @@ include("header.php");
                             </td>
                         </tr>
                         <tr>
-                        <th>
-                            <div>一番人気商品、またサービスの詳細</div>
-                        </th>
-                        <td>
-                            <div class="send_content"><?php print $description; ?></div>
-                        </td>
+                            <th>
+                                <div>一番人気商品、またサービスの詳細</div>
+                            </th>
+                            <td>
+                                <div class="send_content"><?php print $description; ?></div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -254,8 +255,8 @@ include("header.php");
                     </tbody>
                 </table>
 
-<form action="basic_complete.php" method="post">
-                <?php   
+                <form action="basic_complete.php" method="post">
+                    <?php   
 print'<input name="plan" type="hidden" value="'.$plan.'">';
 print'<input name="person_name" type="hidden" value="'.$person_name.'">';
 print'<input name="person_phone" type="hidden" value="'.$person_phone.'">';
@@ -280,15 +281,16 @@ print'<input name="card_month" type="hidden" value="'.$card_month.'">';
 print'<input name="card_year" type="hidden" value="'.$card_year.'">';
 print'<input name="card_code" type="hidden" value="'.$card_code.'">';
 print'<input name="card_name" type="hidden" value="'.$card_name.'">';
+print '<input type="hidden" name="get_id" value="'.$get_id.'">';
 
                             ?>
 
-                <div class="btn-inner">
-                    <p>よろしければ「送信」ボタンを押してください。</p>
-                    <input class="back-confirm-btn" type="button" onclick="history.back()" value="戻る">
+                    <div class="btn-inner">
+                        <p>よろしければ「送信」ボタンを押してください。</p>
+                        <input class="back-confirm-btn" type="button" onclick="history.back()" value="戻る">
 
-                    <input class="next-confirm-btn" type="submit" name="submit" value="送信">
-                </div>
+                        <input class="next-confirm-btn" type="submit" name="submit" value="送信">
+                    </div>
 
 
 

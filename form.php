@@ -1,5 +1,12 @@
 <?php
 include("header.php");
+
+//GETでIDがあった場合の取得
+if(isset($_GET['id'])){
+    $get_id = $_GET['id'];
+}else{
+    $get_id = "web";
+}
 ?>
 <main>
     <div class="main-first">
@@ -182,6 +189,7 @@ include("header.php");
                 <div class="btn-inner">
                     <input class="next-btn btn-flat-vertical-border" type="submit" value="確認">
                 </div>
+                <input type="hidden" name="get_id" value="<?php print $get_id; ?>">
             </form>
         </div>
 
@@ -408,6 +416,7 @@ include("header.php");
                 <div class="btn-inner">
                     <input class="next-btn btn-flat-vertical-border" type="submit" value="確認">
                 </div>
+                <input type="hidden" name="get_id" value="<?php print $get_id; ?>">
             </form>
         </div>
     </div>

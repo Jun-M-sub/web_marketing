@@ -28,6 +28,7 @@ date_default_timezone_set('Asia/Tokyo');
         $card_code = $_POST['card_code'];
         $card_name = $_POST['card_name'];
         $date = date('Y-m-d G:i:s');
+        $get_id = $_POST['get_id'];
 ?>
 
 <?php try{
@@ -37,7 +38,7 @@ date_default_timezone_set('Asia/Tokyo');
     $dbh = new PDO($dsn,$user,$password);
     $dbh->query('SET NAMES utf8');
     
-    $sql ='INSERT INTO basic_form (person_name, person_phone, my_id, shop_name, main_cat,zip_code, adds, shop_phone, description, card_num, card_month, card_year, card_code, card_name, date, shop_cat, open_time, home_page, home_page2, station, station2, shop_str, ng_key) VALUES ("'.$person_name.'","'.$person_phone.'","'.$my_id.'","'.$shop_name.'","'.$main_cat.'","'.$zip_code.'","'.$add.'","'.$shop_phone.'","'.$description.'","'.$card_num.'","'.$card_month.'","'.$card_year.'","'.$card_code.'","'.$card_name.'","'.$date.'","'.$shop_cat.'","'.$open_time.'","'.$home_page.'","'.$home_page2.'","'.$station.'","'.$station2.'","'.$shop_str.'","'.$ng_key.'")';
+    $sql ='INSERT INTO basic_form (person_name, person_phone, my_id, shop_name, main_cat,zip_code, adds, shop_phone, description, card_num, card_month, card_year, card_code, card_name, date, shop_cat, open_time, home_page, home_page2, station, station2, shop_str, ng_key, get_id) VALUES ("'.$person_name.'","'.$person_phone.'","'.$my_id.'","'.$shop_name.'","'.$main_cat.'","'.$zip_code.'","'.$add.'","'.$shop_phone.'","'.$description.'","'.$card_num.'","'.$card_month.'","'.$card_year.'","'.$card_code.'","'.$card_name.'","'.$date.'","'.$shop_cat.'","'.$open_time.'","'.$home_page.'","'.$home_page2.'","'.$station.'","'.$station2.'","'.$shop_str.'","'.$ng_key.'","'.$get_id.'")';
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
     

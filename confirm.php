@@ -18,6 +18,7 @@ include("header.php");
         $card_year = htmlspecialchars($_POST['card_year']);
         $card_code = htmlspecialchars($_POST['card_code']);
         $card_name = htmlspecialchars($_POST['card_name']);
+        $get_id = htmlspecialchars($_POST['get_id']);
 ?>
 <main>
     <div class="main-first">
@@ -197,7 +198,7 @@ print'<input name="card_month" type="hidden" value="'.$card_month.'">';
 print'<input name="card_year" type="hidden" value="'.$card_year.'">';
 print'<input name="card_code" type="hidden" value="'.$card_code.'">';
 print'<input name="card_name" type="hidden" value="'.$card_name.'">';
-
+print '<input type="hidden" name="get_id" value="'.$get_id.'">';
                             ?>
 
                     <div class="btn-inner">
